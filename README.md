@@ -92,34 +92,3 @@ python app/gradio_app.py
 ```
 
 当前保留样例约 20 条，用于快速回归验证。
-
-## 7. 测试与验证
-
-### 7.1 一键验证（推荐）
-
-```bash
-cd /Volumes/External2T/self/html-text-extractor
-python scripts/validate_project.py
-```
-
-该脚本会验证:
-
-- 样例数量是否在 20 条左右。
-- 全量样例抽取是否可运行且无异常。
-- Gradio 样例加载与提取函数是否可用。
-
-### 7.2 Pytest 测试文件
-
-```bash
-cd /Volumes/External2T/self/html-text-extractor
-python -m pytest -q
-```
-
-如本机 Python/pytest 环境存在底层兼容问题，可先使用 7.1 的验证脚本作为主回归入口。
-
-## 8. 与原项目整合说明
-
-- 抽取算法主流程保持一致，保留 V1/V2/V3/V4。
-- 增加向后兼容别名（camelCase API 仍可使用）。
-- 清理了 `._*`、`*.egg-info` 等无效冗余文件。
-- 增加工程化能力: 打包配置、Gradio Demo、回归测试与验证脚本。
