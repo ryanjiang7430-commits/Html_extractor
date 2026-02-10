@@ -1,11 +1,5 @@
 # HTML Text Extractor
 
-本项目是对原始工程 `/Volumes/External2T/INF/htmlextractor/html_extractor` 的整理与整合版本，目标是:
-
-- 保留原有正文抽取算法逻辑（V1/V2/V3/V4）。
-- 按 Google Python 风格进行模块化、类型标注和注释增强。
-- 清理无效与冗余代码/文件，保留可维护的工程结构。
-- 提供约 20 条样例与 Gradio 可视化，方便直接查看抽取效果。
 
 ## 1. 项目能力
 
@@ -17,7 +11,6 @@
 ## 2. 目录结构
 
 ```text
-/Volumes/External2T/self/html-text-extractor
 ├── app/
 │   └── gradio_app.py                 # Gradio 演示入口
 ├── samples/
@@ -65,7 +58,6 @@
 ## 4. 安装与运行
 
 ```bash
-cd /Volumes/External2T/self/html-text-extractor
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .
@@ -74,7 +66,6 @@ pip install -e .
 ## 5. 启动 Gradio
 
 ```bash
-cd /Volumes/External2T/self/html-text-extractor
 python app/gradio_app.py
 ```
 
